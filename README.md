@@ -2,8 +2,7 @@
 
 Experimental test tool for screenreader output of websites - navigate through a web page on commandline. 
 
-Built with puppeteer, say, chalk, readline-sync. Puppeteer allows accessing the accessibility tree since version 3.0.0. See **[accessibility.snapshot()](https://pptr.dev/#?product=Puppeteer&version=v9.1.1&show=api-accessibilitysnapshotoptions
-).**
+Built with puppeteer, say, chalk, readline-sync. Puppeteer allows accessing the accessibility tree since version 3.0.0. See **[accessibility.snapshot()](https://pptr.dev/#?product=Puppeteer&version=v9.1.1&show=api-class-accessibility).**
 
 ## Run
 
