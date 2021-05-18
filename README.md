@@ -25,3 +25,4 @@ Initial goal: Provide a simple screenreader test tool for devs to recognize acce
 
 *(I also experimented with a chrome extension, but chrome won't allow keyboard events of tabulator key. See https://github.com/mandrasch/not-a-real-screenreader)*
 
+Disclaimer: I'm an a11y newbie, feedback is welcome. 
