@@ -21,12 +21,13 @@ function findFocusedNode(node) {
 const puppeteer = require('puppeteer');
 (async () => {
     // use headless:false for debugging, it'll show browser window
+    // TODO: add flag for it
     const headless = true;
     const browser = await puppeteer.launch({
         headless: headless,
         defaultViewport: {
-            width: 1920,
-            height: 1080
+            width: 800,
+            height: 720
         }
     });
     const page = await browser.newPage();
@@ -62,13 +63,19 @@ const puppeteer = require('puppeteer');
     let stop = false;
 
     while (stop == false) {
+        
+        console.log(" ");
+        
+        //console.log(chalk.yellow('************ MENU ***************'));
         navigationOptions = ['Tab forward (focusable)', 'Tab backward (focusable)','Press Enter (focusable)','---------------', 'Read (next)', 'Read previous','---------------', 'Print current tree'],
-        index = readlineSync.keyInSelect(navigationOptions, 'What do you want to do?');
+        index = readlineSync.keyInSelect(navigationOptions, chalk.yellow('What do you want to do next?'));
         //console.log('index', index);
         if (index == -1) {
             stop = true; // break the loop
             break;
         }
+
+        console.log(" ");
 
         switch (index) {
             case 0:
