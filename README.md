@@ -14,9 +14,10 @@ Default example page: https://dequeuniversity.com/library/aria/simple-dialog - t
 
 Tested with node v15.12.0.
 
-## Limitations
+## Current limitations
 
 - does not support clicking on links / navigating to other pages currently (script crashes)
+- does not support form input
 
 ## Background
 
