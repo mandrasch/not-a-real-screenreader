@@ -25,6 +25,6 @@ Tested with node v15.12.0.
 
 Initial goal: Provide a simple screenreader test tool for devs to recognize accessibility issues. It should work without the need of learning screenreader shortcuts beforehand. (I would love a web interface with buttons for it, but having a commandline tool is a first step. :))
 
-*(I also experimented with a chrome extension, but chrome won't allow keyboard events of tabulator key. See https://github.com/mandrasch/not-a-real-screenreader)*
+I also experimented with a chrome extension, but chrome won't allow dispatching keyboard events of tabulator key to shift the focus in the browser (most likely because security). See https://github.com/mandrasch/not-a-real-screenreader for source code. Puppeteer allows sending tab key events to the browser.
 
 Disclaimer: I'm an a11y newbie, feedback is welcome. 
