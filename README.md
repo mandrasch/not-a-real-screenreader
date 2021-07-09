@@ -20,6 +20,7 @@ Tested with node v14.17.3
 
 ## Current limitations
 
+- does not support going into subgroups, very basic implementation
 - does not support clicking on links / navigating to other pages currently
 - does not support form input
 - speech output has no language support, maybe use another library?
@@ -27,7 +28,9 @@ Tested with node v14.17.3
 
 ## Background
 
-Initial goal: Provide a simple screenreader test tool for devs to recognize accessibility issues. It should work without the need of learning screenreader shortcuts beforehand. (I would love a web interface with buttons for it, but having a commandline tool is a first step. :))
+Initial goal: Provide a simple screenreader test tool for devs to recognize accessibility issues. It should work without the need of learning screenreader shortcuts beforehand. 
+
+Also a simple cross browser solution would be a big win I guess.
 
 I also experimented with a chrome extension, but chrome won't allow dispatching keyboard events of tabulator key to shift the focus in the browser (most likely because security). See https://github.com/mandrasch/not-a-real-screenreader-chrome-extension for source code. Puppeteer allows sending tab key events to the browser.
 
