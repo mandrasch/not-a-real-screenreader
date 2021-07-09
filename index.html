@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Not a real screenreader</title>
+
+  <!-- Font awesome 5 -->
+  <link href="./assets/css/fontawesome-free-web/css/all.css" rel="stylesheet" />
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="./assets/css/bulma/bulma.min.css" />
+  <!-- Fork of https://github.com/BulmaTemplates/bulma-templates -->
+  <link rel="stylesheet" href="./assets/css/landing.css" />
+  <!-- Our styles -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+
+</head>
+
+<body>
+  <!-- <h1>Hello World!</h1>
+  We are using Node.js <span id="node-version"></span>,
+  Chromium <span id="chrome-version"></span>,
+  and Electron <span id="electron-version"></span> -->
+  <section class="hero is-info is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              Not a real screenreader
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fa fa-home"></i>
+                  </span>
+                  <span>Home</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fa fa-superpowers"></i>
+                  </span>
+                  <span>Examples</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fa fa-book"></i>
+                  </span>
+                  <span>Documentation</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined"
+                  href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
+                  <span>View Source</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox" id="checkboxDisableHeadlessMode">
+                    Disable headless mode
+                  </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="box box--bg-dark box--is-visible-after-website-opening box--align-items-center" id="boxScreenreaderOutput">
+        Loading ..
+      </div>
+
+    </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-11 is-offset-1">
+          <!-- <h1 class="title">
+            Not a real screenreader
+          </h1>-->
+          <!-- <h2 class="subtitle">
+            Check out the screenreader output of a web page, try to open and close this accessible modal for example:
+          </h2> -->
+          <div class="box box--website-url">
+            <p class="has-text-left">
+              <label for="inputWebsiteUrl">Website URL:</label>
+            </p>
+            <div class="field has-addons">
+              <p class="control is-expanded">
+                <input class="input" type="url" id="inputWebsiteUrl" value="https://dequeuniversity.com/library/aria/simple-dialog ">
+              </p>
+              <p class="control">
+                <a class="button is-primary" id="btnOpenWebsite">
+                  Open website
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="box box--control-center box--is-visible-after-website-opening content" id="boxControlCenter">
+
+            <h2>Navigate through the website</h2>
+            <p class="box__status">
+              Current URL: <span id="statusCurrentUrl"></span>
+            </p>
+
+            <h3>Focusable items</h3>
+            <p>Tab through the interactive elements. In a web browser or screenreader you would normally use tabulator / shift + tabulator key.</p>
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <button class="button" id="btnFocusPrev">
+                  <span class="icon">
+                    <i class="fas fa-arrow-alt-circle-left"></i>
+                  </span>
+                  <span>Previous focusable</span>
+                </button>
+              </p>
+              <p class="control">
+                <button class="button" id="btnTriggerEnter">
+                  <span>Enter</span>
+                </button>
+              </p>
+              <p class="control">
+                <button class="button" id="btnFocusNext">
+                  <span>Next focusable</span>
+                  <span class="icon">
+                    <i class="fas fa-arrow-alt-circle-right"></i>
+                  </span>
+                </button>
+              </p>
+            </div>
+            <h3>Read elements</h3>
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <button class="button" id="btnReadPrev">
+                  <span class="icon">
+                    <i class="fas fa-arrow-alt-circle-left"></i>
+                  </span>
+                  <span>Read previous element</span>
+                </button>
+              </p>
+              <p class="control">
+                <button class="button" id="btnStopReading">
+                  <span>Stop</span>
+                </button>
+              </p>
+              <p class="control">
+                <button class="button" id="btnReadNext">
+                  <span>Read next element</span>
+                  <span class="icon">
+                    <i class="fas fa-arrow-alt-circle-right"></i>
+                  </span>
+                </button>
+              </p>
+            </div>
+            <h3>Special actions</h3>
+            <div class="field">
+              TODO: List headings, Go to main landmark, Enter text in forms
+            </div>
+            <h3>Reset</h3>
+            <div class="field">
+              <a href="#">Reset the session</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="./assets/js/custom.js"></script>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

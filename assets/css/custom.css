@@ -1,0 +1,46 @@
+/* fixed nav */
+.hero-head{
+    position:fixed;
+    width:100%;
+    background:rgba(57, 58, 57, 1);
+    z-index:2;
+}
+.hero-body{
+    margin-top:120px;
+}
+
+/* colors */
+.navbar-burger{
+    color:white;
+}
+/* 
+* box styles 
+*/
+.box--bg-dark{
+    background-color:black;
+    color:white;
+    height:100px;
+    overflow: auto;
+}
+body.is-website-opened .box--align-items-center{
+    display:flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+* state: show / hide boxes 
+*/
+.box--is-visible-after-website-opening{
+    display:none;
+}
+body.is-website-opened .box--is-visible-after-website-opening{
+    display:block;
+}
+body.is-website-opened .box--website-url{
+    display:none;
+}
+/* don't center if website is opened */
+body.is-website-opened .hero.is-fullheight .hero-body{
+    align-items: normal;
+}

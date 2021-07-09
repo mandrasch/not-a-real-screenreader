@@ -1,18 +1,56 @@
 {
-  "name": "not-a-real-screenreader-pptr",
-  "version": "0.9",
-  "description": "Can you navigate a web page on cli?",
-  "main": "index.js",
+  "name": "not-a-real-screenreader",
+  "version": "1.0.0",
+  "description": "Experimental test tool for screenreader output of websites - navigate through a web page with a graphical user interface, no need to remember screen reader shortcuts. Help tool for (sighted) devs, starting their a11y journey.",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Matthias Andrasch",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "@electron-forge/maker-deb": "^6.0.0-beta.57",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
+    "@electron-forge/maker-zip": "^6.0.0-beta.57",
+    "electron": "^13.1.6"
+  },
   "dependencies": {
     "chalk": "^4.1.1",
-    "puppeteer": "^9.1.1",
-    "readline-sync": "^1.4.10",
+    "electron-squirrel-startup": "^1.0.0",
+    "puppeteer-core": "^10.1.0",
+    "puppeteer-in-electron": "^3.0.5",
     "say": "^0.16.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "my_first_electron_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
