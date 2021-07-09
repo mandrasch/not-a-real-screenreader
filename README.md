@@ -1,4 +1,4 @@
-# not-a-real-screenreader-pptr
+# Not a real Screenreader
 
 Experimental test tool for screenreader output of websites - navigate through a web page on commandline. 
 
