@@ -1,5 +1,8 @@
 # Not a real Screenreader
 
+Status: experimental / preview
+Note: Use at your own risk
+
 Experimental test tool for screenreader output of websites - navigate through a web page with a graphical user interface. No need to (immediately) learn operating a screenreader with shortcuts to experience accessibility issues. Learning tool for (sighted) devs, who are starting their a11y journey.
 
 ⚠️ Always use a real screenreader for serious accessibility testing! This is just an experimental learning tool for web accessibility. ⚠️
@@ -49,6 +52,8 @@ Current focused element in WebArea: {
 - speech output has no language support, maybe use another library?
 - does not support all focus changes yet
 - current URL is not updated on page change
+- Problem with minimizing the window on mac
+- Not tested on windows/linux yet
 
 ## Background
 

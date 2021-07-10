@@ -29,6 +29,8 @@ async function initPpptr() {
     const browser = await pie.connect(app, puppeteer);
 
     electronWinPptr = new BrowserWindow({
+        width: 1200,
+        height: 750,
         webPreferences: {
             // security (default values), because it is remote content
             nodeIntegration: false,
