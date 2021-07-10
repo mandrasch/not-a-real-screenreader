@@ -22,8 +22,29 @@ Tested with node v14.17.3
 
 ## Current limitations
 
-- does not work with childIds currently, I just switched to the full a11y tree (workaround)
+```
+Current focused element in WebArea: {
+  nodeId: '7014',
+  ignored: false,
+  role: { type: 'role', value: 'button' },
+  name: {
+    type: 'computedString',
+    value: 'JavaScript',
+    sources: [ [Object], [Object], [Object], [Object] ]
+  },
+  properties: [
+    { name: 'focusable', value: [Object] },
+    { name: 'focused', value: [Object] },
+    { name: 'expanded', value: [Object] }
+  ],
+  childIds: [ '7243' ],
+  backendDOMNodeId: 53
+} nodeId 7014
+```
+
+- does not work with childIds currently
 - does not support going into subgroups, very basic implementation
+- does not check for expanded=true/false yet
 - does not support form input (text input) yet
 - speech output has no language support, maybe use another library?
 
