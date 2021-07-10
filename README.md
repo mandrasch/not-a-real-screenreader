@@ -28,15 +28,6 @@ In last fall I started working as web developer again. Web Accessibility is now 
 
 Disclaimer: I'm an a11y newbie. I try to respect *Nothing About Us Without Us* as much as possible. Feedback is very welcome. :-)
 
-## Open Source tech stack
-
-- electron
-- puppeteer
-- puppeteer-in-electron
-- say, chalk, bulma CSS, etc.
-
-Puppeteer allows accessing the accessibility tree since version 3.0.0. See [accessibility.snapshot()](https://pptr.dev/#?product=Puppeteer&version=v9.1.1&show=api-class-accessibility). Unfortunately there is no DOM-reference given right now. Therefore [this workaround by dtinth](https://github.com/puppeteer/puppeteer/issues/3641#issuecomment-655639166) is used right now in this prototype.
-
 ## Current limitations
 
 - does not work with child-Ids currently
@@ -52,7 +43,16 @@ Puppeteer allows accessing the accessibility tree since version 3.0.0. See [acce
 
 ⚠️ Always use a real screenreader for serious accessibility testing! This is just an experimental learning tool for web accessibility. ⚠️
 
-### Example output
+## Open Source tech stack
+
+- electron
+- puppeteer
+- puppeteer-in-electron
+- say, chalk, bulma CSS, etc.
+
+### Example output of accessibility tree
+
+Puppeteer allows accessing the accessibility tree since version 3.0.0. See [accessibility.snapshot()](https://pptr.dev/#?product=Puppeteer&version=v9.1.1&show=api-class-accessibility). Unfortunately there is no DOM-reference given right now. Therefore [this workaround by dtinth](https://github.com/puppeteer/puppeteer/issues/3641#issuecomment-655639166) is used right now in this prototype.
 
 ```
 Current focused element in WebArea: {
