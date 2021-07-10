@@ -147,7 +147,7 @@
               </p>
             </div>
             <h3>Read elements</h3>
-            <p class="is-size-7 has-text-justified"><span style="color:red;">experimental</span> This one is a little bit trickier. In NVDA you start reading elements with "Insert + &#8595; or Numpad +", VoiceOver uses "Configured VoiceOver Combination + A". Search for screenreader shortcut lists or search for reports of screenreader users to find out more about this. There are a lot of commands available for each screenreader software.</p>
+            <p class="is-size-7 has-text-justified"><span class="is-warning">Experimental</span> This one is a little bit trickier. In NVDA you start reading elements with "Insert + &#8595; or Numpad +", VoiceOver uses "Configured VoiceOver Combination + A". Search for screenreader shortcut lists or search for reports of screenreader users to find out more about this. There are a lot of commands available for each screenreader software.</p>
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button class="button" id="btnReadPrev">
@@ -173,19 +173,13 @@
             </div>
             <h3>Special actions</h3>
             <div class="field">
-              TODO: List headings, Go to main landmark, Enter text in forms
-              <div class="field is-grouped is-grouped-centered">
-                <button class="button" id="btnReadWholeDocument">
-                  <span>Read whole document</span>
-                </button>
-              </div>
-              <button class="button" id="btnTryWorkaround">Try workaround</button>
+              TODO: List headings, Go to main landmark, Enter text in forms, Read whole document
             </div>
             <h3>Settings</h3>
             <div class="field">
               <label class="checkbox">
                 <input type="checkbox" id="checkboxDisableHeadlessMode">
-                Disable headless mode
+                Disable headless mode (puppeteer)
               </label>
             </div><div class="field">
               <label class="checkbox">
@@ -195,7 +189,9 @@
             </div>
             <h3>Reset</h3>
             <div class="field">
-              <a href="#">Reset the session</a>
+              <button class="button" id="btnResetSession">
+                <span>Reset the session</span>
+              </button>
             </div>
           </div>
         </div>

@@ -17,6 +17,7 @@ const boxControlCenter = document.getElementById('boxControlCenter');
 const statusCurrentUrl = document.getElementById('statusCurrentUrl');
 const boxScreenreaderOutput = document.getElementById('boxScreenreaderOutput');
 const checkboxDisableHeadlessMode = document.getElementById('checkboxDisableHeadlessMode');
+const checkboxShowA11yTree = document.getElementById('checkboxShowA11yTree');
 
 btnOpenWebsite.addEventListener('click', function () {
 
@@ -57,9 +58,15 @@ checkboxDisableHeadlessMode.addEventListener('change',function(){
     ipc.send('triggerHeadlessMode',this.checked,10);
 })
 
-btnTryWorkaround.addEventListener('click',function(){
-    ipc.send('tryWorkaround',null,10);
+checkboxShowA11yTree.addEventListener('change',function(){
+    ipc.send('triggerShowHideA11yTree',this.checked,10);
 })
+
+btnResetSession.addEventListener('click',function(){
+    body.classList.remove('is-website-opened');
+})
+
+
 
 /* 
 * ipc: receive from main 

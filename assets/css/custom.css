@@ -16,6 +16,9 @@
 .button.is-primary{
     color:black;
 }
+span.is-warning{
+    color:red;
+}
 /* 
 * box styles 
 */

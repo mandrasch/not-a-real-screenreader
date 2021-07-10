@@ -47,6 +47,7 @@ Current focused element in WebArea: {
 - does not check for expanded=true/false yet
 - does not support form input (text input) yet
 - speech output has no language support, maybe use another library?
+- does not support all focus changes yet
 
 ## Background
 

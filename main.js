@@ -110,6 +110,7 @@ function createA11yTreeWindow() {
     electronWinA11yTree = new BrowserWindow({
         width: 350,
         height: 350,
+        show:false,
         webPreferences: {
             // we activate it because we need access to require electron & ipc
             nodeIntegration: true, // TODO: this is safe because we have no remote content in the index.html/renderer?
@@ -305,6 +306,15 @@ ipc.on('triggerHeadlessMode', (event, disableHeadless) => {
         electronWinControlCenter.focus();
     }
 })
+
+ipc.on('triggerShowHideA11yTree', (event, show) => {
+    if (show == true) {
+        electronWinA11yTree.show();
+        // TODO: move window next to each other
+    } else {
+        electronWinA11yTree.hide();
+    }
+});
 
 ipc.on('triggerActionFocus', async (event, nextOrPrev) => {
 
