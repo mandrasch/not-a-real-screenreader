@@ -1,5 +1,5 @@
 # Not a real screenreader
-*Operate a (very simple) screenreader without keyboard shortcuts*
+*Operate a (very simple) node-based screenreader without keyboard shortcuts*
 
 Status: Experimental / Use at your own risk 👷
 
@@ -24,7 +24,7 @@ Tested with node v14.17.3 (LTS)
 
 In last fall I started working as web developer again. Web Accessibility is now part of my daily job, so I needed to learn fast. A big struggle I had at first was operating screenreader software. There are just a lot of keyboard shortcuts to learn while I just wanted to get a basic feeling of how a website is read to screenreader users. Like "Does the screenreader even recognize my button?!".  I'm not sure, but maybe a lot of developers postpone learning a11y skills because of this initial hurdle? (Yes, lame excuse, I know!)
 
-*Not a real screenreader* is an attempt to provide a simple learning and test tool for a11y-beginners. There is no need to learn keyboard shortcuts, the (super simple and basic) screenreader is operated with buttons. 
+*Not a real screenreader* is an attempt to provide a simple learning and test tool for a11y-beginners. There is no need to learn keyboard shortcuts, the (very rudimentary and basic) screenreader is operated with buttons. 
 
 Disclaimer: I'm an a11y newbie. I try to respect *Nothing About Us Without Us* as much as possible. Feedback is very welcome. :-)
 
