@@ -76,4 +76,4 @@ Current focused element in WebArea: {
 
 ## License
 
-My own scripts and this work is available as CC0 (https://creativecommons.org/publicdomain/zero/1.0/deed.de). Please see package.json for a list of Open Source Libraries used. I'll provide a LICENSE and CREDITS file in future.
+My own scripts are available as CC0 (https://creativecommons.org/publicdomain/zero/1.0/deed.de). Please see package.json for a list of Open Source Libraries used (and their respective license). I'll provide a LICENSE and CREDITS file in future.
