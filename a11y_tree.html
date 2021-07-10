@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y tree</title>
+    <style>
+        /*
+        * .electron-in-page-search-window is a class specified to default
+        * <webview> element for search window.
+        */
+        .electron-in-page-search-window {
+            position: fixed;
+            top: 0;
+            right: 0;
+            border: solid grey 1px;
+            background-color: white;
+            width: 300px;
+            height: 36px;
+        }
+
+        /*
+        * .search-inactive is added to search window <webview> when the window
+        * is inactive.
+        */
+        .search-inactive {
+            visibility: hidden;
+        }
+
+        /*
+        * .search-inactive is added to search window <webview> when the window
+        * is active.
+        */
+        .search-active {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="trigger-search" value="Search on document"/>
+        
+    <div id="currentA11yTree"></div>
+
+    <script type="module" src="./renderer_a11y_tree.js"></script>
+</body>
+</html>

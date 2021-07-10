@@ -6,6 +6,8 @@ Experimental test tool for screenreader output of websites - navigate through a 
 
 Built with electron, puppeteer, puppeteer-in-electron, say, chalk, bulma. Puppeteer allows accessing the accessibility tree since version 3.0.0. See **[accessibility.snapshot()](https://pptr.dev/#?product=Puppeteer&version=v9.1.1&show=api-class-accessibility).**
 
+(This version currently uses a workaround to interact with the nodes, thanks to https://github.com/puppeteer/puppeteer/issues/3641#issuecomment-655639166)
+
 🎥 Demo video: https://www.youtube.com/watch?v=xUTCEnfepHk (old commandline version)
 🎥 Demo video II: (coming soon)
 
@@ -20,11 +22,10 @@ Tested with node v14.17.3
 
 ## Current limitations
 
+- does not work with childIds currently, I just switched to the full a11y tree (workaround)
 - does not support going into subgroups, very basic implementation
-- does not support clicking on links / navigating to other pages currently
-- does not support form input
+- does not support form input (text input) yet
 - speech output has no language support, maybe use another library?
-- Focusing and reading actions are not synchronized
 
 ## Background
 

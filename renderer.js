@@ -9,7 +9,7 @@ const ipc = electron.ipcRenderer
 */
 // button#id will be automatically converted to IDs (electron or node?!)
 const body = document.querySelector('body');
-// we need to defined this, because its a#id
+// we need to defined this, because its a#id (TODO: add role=button?)
 const btnOpenWebsite = document.getElementById('btnOpenWebsite');
 // other elements
 const inputWebsiteUrl = document.getElementById('inputWebsiteUrl');
@@ -20,6 +20,7 @@ const checkboxDisableHeadlessMode = document.getElementById('checkboxDisableHead
 
 btnOpenWebsite.addEventListener('click', function () {
 
+    console.log('clicked btnOpenWebsite');
     // show control center, hide url box
     body.classList.add('is-website-opened');
 
@@ -29,9 +30,7 @@ btnOpenWebsite.addEventListener('click', function () {
     // Update status
     statusCurrentUrl.innerHTML = inputWebsiteUrl.value;
 
-    let disableHeadless = document.getElementById('checkboxDisableHeadlessMode').checked;
-
-    ipc.send('openWebsite', {'url':inputWebsiteUrl.value,'disableHeadless':disableHeadless}, 10);
+    ipc.send('openWebsite', {'url':inputWebsiteUrl.value}, 10);
 
 }, false);
 
@@ -56,6 +55,10 @@ btnStopReading.addEventListener('click',function(){
 
 checkboxDisableHeadlessMode.addEventListener('change',function(){
     ipc.send('triggerHeadlessMode',this.checked,10);
+})
+
+btnTryWorkaround.addEventListener('click',function(){
+    ipc.send('tryWorkaround',null,10);
 })
 
 /* 

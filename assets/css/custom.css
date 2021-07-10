@@ -9,9 +9,12 @@
     margin-top:120px;
 }
 
-/* colors */
+/* colors & contracts */
 .navbar-burger{
     color:white;
+}
+.button.is-primary{
+    color:black;
 }
 /* 
 * box styles 
@@ -31,6 +34,10 @@ body.is-website-opened .box--align-items-center{
 /*
 * state: show / hide boxes 
 */
+body.is-website-opened .is-hidden-after-website-opened{
+    display:none;
+}
+
 .box--is-visible-after-website-opening{
     display:none;
 }
@@ -43,4 +50,9 @@ body.is-website-opened .box--website-url{
 /* don't center if website is opened */
 body.is-website-opened .hero.is-fullheight .hero-body{
     align-items: normal;
+}
+
+/* links */
+.content a{
+    text-decoration: underline;
 }
