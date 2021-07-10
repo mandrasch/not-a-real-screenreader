@@ -11,7 +11,7 @@ Status: Experimental / Use at your own risk 👷
 
 ## Demo
 
-🎥   Demo video: (coming soon)
+🎥   Demo video: https://www.youtube.com/watch?v=YJ8tQs6Nz50
 
 ## Run
 
