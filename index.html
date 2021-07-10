@@ -122,7 +122,7 @@
             </p>
 
             <h3>Focusable items</h3>
-            <p class="is-size-7 has-text-justified">Tab through the interactive elements. In desktop screenreaders you normally use the TAB key for this. With Shift + TAB you get the previous element. This also works in web browsers, which is a great way of quickly testing accessibility issues. (<a href="https://www.matuzo.at/blog/testing-with-tab/" target="_blank" aria-label="One of my favourite accessibility testing tools: The Tab Key.">Read more</a>)</p>
+            <p class="is-size-7 has-text-justified">Tab through the interactive elements. In desktop screenreaders you normally use the TAB key for this. With Shift + TAB you get the previous element. This also works in web browsers, which is a great way of quickly testing accessibility issues. (<a href="https://www.matuzo.at/blog/testing-with-tab/" target="_blank" aria-label="One of my favourite accessibility testing tools: The Tab Key.">Read more on matuzo.at</a>)</p>
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button class="button" id="btnFocusPrev">
@@ -147,7 +147,7 @@
               </p>
             </div>
             <h3>Read elements</h3>
-            <p class="is-size-7 has-text-justified"><span class="is-warning">Experimental</span> This one is a little bit trickier. In NVDA you start reading elements with "Insert + &#8595; or Numpad +", VoiceOver uses "Configured VoiceOver Combination + A". Search for screenreader shortcut lists or search for reports of screenreader users to find out more about this. There are a lot of commands available for each screenreader software.</p>
+            <p class="is-size-7 has-text-justified"><span class="is-warning">Experimental - not working correctly.</span> This one is a little bit trickier. In NVDA you start reading elements with "Insert + &#8595;", VoiceOver uses "Configured VoiceOver shortcut combination + A". Search for screenreader shortcut lists or search for reports of screenreader users to find out more about this. There are a lot of commands available for each screenreader software. This is only a quick implementation, which has a lot of limitations right now.</p>
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button class="button" id="btnReadPrev">
@@ -173,13 +173,13 @@
             </div>
             <h3>Special actions</h3>
             <div class="field">
-              TODO: List headings, Go to main landmark, Enter text in forms, Read whole document
+              TODO: List headings, Go to main landmark, Enter text in forms, Read whole document?
             </div>
             <h3>Settings</h3>
             <div class="field">
               <label class="checkbox">
                 <input type="checkbox" id="checkboxDisableHeadlessMode">
-                Disable headless mode (puppeteer)
+                Show puppeteer window (headless browser)
               </label>
             </div><div class="field">
               <label class="checkbox">
@@ -190,6 +190,9 @@
             <h3>Reset</h3>
             <div class="field">
               <button class="button" id="btnResetSession">
+                <span class="icon">
+                  <i class="fas fa-undo-alt"></i>
+                </span>
                 <span>Reset the session</span>
               </button>
             </div>
