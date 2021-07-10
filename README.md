@@ -1,5 +1,5 @@
-# Not a real Screenreader
-*Operate a screenreader without keyboard shortcuts*
+# Not a real screenreader
+*Operate a (very simple) screenreader without keyboard shortcuts*
 
 Status: Experimental / Use at your own risk 👷
 
@@ -11,7 +11,7 @@ Status: Experimental / Use at your own risk 👷
 
 ## Demo
 
-🎥  Demo video: (coming soon)
+🎥   Demo video: (coming soon)
 
 ## Run
 
