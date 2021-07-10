@@ -4,6 +4,18 @@ console.log('RENDERER.js', window, document)
 const electron = require('electron')
 const ipc = electron.ipcRenderer
 
+/* 
+* External links
+*/
+const { shell } = require("electron")
+
+document.body.addEventListener('click', event => {
+  if (event.target.tagName.toLowerCase() === 'a' && event.target.classList.contains('external-link')) {
+    event.preventDefault();
+    shell.openExternal(event.target.href);
+  }
+});
+
 /*
 * Event listeners
 */
