@@ -1,6 +1,6 @@
 # Not a real Screenreader
 
-Status: experimental / preview
+Status: experimental / preview <br>
 Note: Use at your own risk
 
 Experimental test tool for screenreader output of websites - navigate through a web page with a graphical user interface. No need to (immediately) learn operating a screenreader with shortcuts to experience accessibility issues. Learning tool for (sighted) devs, who are starting their a11y journey.
