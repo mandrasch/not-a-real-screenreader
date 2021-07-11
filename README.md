@@ -18,6 +18,10 @@ Status: Experimental / Use at your own risk 👷
 - `npm install`
 - `npm start`
 
+## Build
+
+- `yarn build` (electron-builder recommends yarn)
+
 Tested with node v14.17.3 (LTS)
 
 ## Background story

@@ -7,7 +7,10 @@
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "postinstall": "electron-builder install-app-deps",
+		"build": "electron-builder --mac --windows --linux",
+		"release": "electron-builder --mac --windows --linux --publish always"
   },
   "author": "Matthias Andrasch",
   "license": "MIT",
@@ -17,7 +20,8 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.57",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
-    "electron": "^13.1.6"
+    "electron": "^13.1.6",
+    "electron-builder": "^22.11.7"
   },
   "dependencies": {
     "chalk": "^4.1.1",
@@ -52,5 +56,19 @@
         }
       ]
     }
-  }
+  },
+  "build": {
+		"appId": "com.matthiasandrasch.notarealscreenreader",
+		"productName": "Not a real Screenreader",
+		"mac": {
+			"category": "public.app-category.education"
+		},
+		"dmg": {
+			"icon": false
+		},
+		"linux": {
+			"target": ["AppImage"],
+			"category": "Office"
+		}
+	}
 }
