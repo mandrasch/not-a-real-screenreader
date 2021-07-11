@@ -61,13 +61,14 @@
 		"appId": "com.matthiasandrasch.notarealscreenreader",
 		"productName": "Not a real Screenreader",
 		"mac": {
+      "target": "dmg",
 			"category": "public.app-category.education"
 		},
-		"dmg": {
-			"icon": false
-		},
+    "win":{
+      "target": "nsis"
+    },
 		"linux": {
-			"target": ["AppImage"],
+			"target": "AppImage",
 			"category": "Office"
 		}
 	}
