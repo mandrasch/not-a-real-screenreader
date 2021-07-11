@@ -1,6 +1,6 @@
 {
   "name": "not-a-real-screenreader",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Experimental test tool for screenreader output of websites - navigate through a web page with a graphical user interface, no need to remember screen reader shortcuts. Help tool for (sighted) devs, starting their a11y journey.",
   "main": "main.js",
   "scripts": {

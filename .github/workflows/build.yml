@@ -8,8 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        # we leave out ubuntu-latest right now, cannot find module 'dmg-license'
-        os: [windows-latest,macos-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
       - name: Check out Git repository
