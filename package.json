@@ -8,9 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "postinstall": "electron-builder install-app-deps",
-		"build": "electron-builder --mac --windows --linux",
-		"release": "electron-builder --mac --windows --linux --publish always"
+    "postinstall": "electron-builder install-app-deps"
   },
   "author": "Matthias Andrasch",
   "license": "MIT",
@@ -64,11 +62,11 @@
       "target": "dmg",
 			"category": "public.app-category.education"
 		},
-    "win":{
-      "target": "nsis"
-    },
+		"dmg": {
+			"icon": false
+		},
 		"linux": {
-			"target": "AppImage",
+			"target": ["AppImage"],
 			"category": "Office"
 		}
 	}
