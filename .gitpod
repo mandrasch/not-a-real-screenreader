@@ -1,6 +1,7 @@
 # https://github.com/JesterOrNot/Gitpod-Electron/blob/master/.gitpod.yml
 # https://github.com/csweichel/gitpod-hello-ui-demo/blob/master/.gitpod
 
+# is this needed? (taken from examples)
 checkoutLocation: src/github.com/32leaves/hello-ui
 workspaceLocation: /
 image:
