@@ -2,6 +2,9 @@
 # (and https://github.com/JesterOrNot/Gitpod-Electron)
 FROM gitpod/workspace-full-vnc
 
+# Bugfix
+USER root
+
 # Install dependencies
 RUN apt-get update \
     && apt-get install -y libgtk-3-dev \
