@@ -78,6 +78,10 @@ Current focused element in WebArea: {
 } nodeId 7014
 ```
 
+## Alternatives
+
+- Screenreader usage in browser https://assistivlabs.com/
+
 ## License
 
 My own scripts are available as CC0 (https://creativecommons.org/publicdomain/zero/1.0/deed.de). Please see package.json for a list of Open Source Libraries used (and their respective license). I'll provide a LICENSE and CREDITS file in future.
