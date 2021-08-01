@@ -13,7 +13,11 @@ Status: Experimental / Use at your own risk 👷
 
 🎥   Demo video: https://www.youtube.com/watch?v=YJ8tQs6Nz50
 
-## Run
+## Install
+
+See [Releases](https://github.com/mandrasch/not-a-real-screenreader/releases) to download it for your operating system.
+
+## For Devs
 
 - `npm install`
 - `npm start`
