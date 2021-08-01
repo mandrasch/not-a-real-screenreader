@@ -1,11 +1,12 @@
-#https://github.com/JesterOrNot/Gitpod-Electron/blob/master/.gitpod.yml
+# https://github.com/JesterOrNot/Gitpod-Electron/blob/master/.gitpod.yml
+# https://github.com/csweichel/gitpod-hello-ui-demo/blob/master/.gitpod
+
+checkoutLocation: src/github.com/32leaves/hello-ui
+workspaceLocation: /
 image:
   file: .gitpod.Dockerfile
-
-# List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/43_config_ports/
 ports:
-- port: 3000
-
-# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/44_config_start_tasks/
+  - port: 3000
+    protocol: "http"
 tasks:
-- init: npm install && npm start
+  - command: "npm install && npm start"
