@@ -36,6 +36,11 @@ In last fall I started working as web developer again. Web Accessibility is now 
 
 Disclaimer: I'm an a11y newbie. I try to respect *Nothing About Us Without Us* as much as possible. Feedback is very welcome. :-)
 
+See as well:
+
+- https://github.com/mandrasch/screenreader-remote-control
+- Touch Portal https://twitter.com/m_andrasch/status/1551823322333184001
+
 ## Current limitations
 
 - does not work with child-Ids currently
